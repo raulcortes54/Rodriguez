@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block titulo %} {% endblock %}</title>
+<meta name="description" content="Pepito's Store: ropa deportiva, tenis, accesorios y artículos de entrenamiento para acompañarte en cada reto.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/all.min.css') }}">
+    
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="site-header">
+    <div class="header-top">
+        <div class="header-inner">
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <a href="#" class="logo" aria-label="Pepito's Store - Inicio">
+                Pepito's<span>Store</span>
+            </a>
+
+            <nav class="main-nav" id="nav-menu" aria-label="Navegación principal">
+                <button class="nav-close" id="nav-close" aria-label="Cerrar menú">&times;</button>
+                <ul>
+                    <li><a href="#hero" class="nav-link active-link">Inicio</a></li>
+                    <li><a href="#categorias" class="nav-link">Hombre</a></li>
+                    <li><a href="#categorias" class="nav-link">Mujer</a></li>
+                    <li><a href="#categorias" class="nav-link">Calzado</a></li>
+                    <li><a href="#colecciones" class="nav-link">Accesorios</a></li>
+                    <li><a href="#promocion" class="nav-link nav-link--offer">Ofertas</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <form class="search-form" role="search" action="#" onsubmit="return false;">
+                    <label for="search-input" class="visually-hidden">Buscar productos</label>
+                    <input type="search" id="search-input" placeholder="Buscar tenis, ropa, accesorios…">
+                    <button type="submit" aria-label="Buscar">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                </form>
+
+                <button class="icon-btn" id="search-toggle" aria-label="Buscar">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+
+                <button class="icon-btn" id="user-btn" aria-label="Mi cuenta">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+
+                <button class="icon-btn" id="fav-btn" aria-label="Ver favoritos">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 20s-7-4.4-9.5-9C0.7 7.5 2.6 4 6 4c2 0 3.5 1.2 6 3.7C14.5 5.2 16 4 18 4c3.4 0 5.3 3.5 3.5 7-2.5 4.6-9.5 9-9.5 9z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                    <span class="badge" id="fav-count">0</span>
+                </button>
+
+                <button class="icon-btn" id="cart-btn" aria-label="Ver carrito de compras">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 8H6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="21" r="1.4" fill="currentColor"/><circle cx="18" cy="21" r="1.4" fill="currentColor"/></svg>
+                    <span class="badge badge--accent" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+</header>
+
+<main id="main-content">
+    {% block contenido %}{% endblock %}
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="section-inner">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo logo--footer">Pepito's<span>Store</span></a>
+                <p>Ropa deportiva, tenis, accesorios y artículos de entrenamiento para quienes no se detienen.</p>
+                <ul class="social-list" aria-label="Redes sociales">
+                    <li><a href="#" aria-label="Pepito's Store en Instagram">Instagram</a></li>
+                    <li><a href="#" aria-label="Pepito's Store en Facebook">Facebook</a></li>
+                    <li><a href="#" aria-label="Pepito's Store en TikTok">TikTok</a></li>
+                    <li><a href="#" aria-label="Pepito's Store en YouTube">YouTube</a></li>
+                </ul>
+            </div>
+
+            <nav class="footer-col" aria-label="Productos">
+                <h3>Productos</h3>
+                <ul>
+                    <li><a href="#">Hombre</a></li>
+                    <li><a href="#">Mujer</a></li>
+                    <li><a href="#">Calzado</a></li>
+                    <li><a href="#">Tenis</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer-col" aria-label="Deportes">
+                <h3>Deportes</h3>
+                <ul>
+                    <li><a href="#">Running</a></li>
+                    <li><a href="#">Training</a></li>
+                    <li><a href="#">Fútbol</a></li>
+                    <li><a href="#">Basketball</a></li>
+                    <li><a href="#">Fitness</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer-col" aria-label="Asistencia">
+                <h3>Asistencia</h3>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Pedidos</a></li>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Cambios</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer-col" aria-label="Información">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="#">Acerca de nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Aviso de privacidad</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pepito's Store. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+{% extends 'layout.html' %}
+{% block titulo %} Pepito's Store — Ropa y calzado deportivo {% endblock %}
+{% block contenido %}
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+        <div class="hero-shape hero-shape--1" aria-hidden="true"></div>
+        <div class="hero-shape hero-shape--2" aria-hidden="true"></div>
+        <div class="hero-shape hero-shape--3" aria-hidden="true"></div>
+
+        <div class="hero-inner">
+            <div class="hero-text">
+                <span class="eyebrow reveal">Nueva temporada</span>
+                <h1 class="hero-title">
+                    <span class="reveal">MUEVE</span>
+                    <span class="reveal">TU ESTILO</span>
+                </h1>
+                <p class="hero-subtitle reveal">Ropa deportiva diseñada para acompañarte en cada entrenamiento y en cada reto.</p>
+                <div class="hero-cta reveal">
+                    <a href="#productos" class="btn btn--primary">Comprar ahora</a>
+                    <a href="#colecciones" class="btn btn--outline">Ver colección</a>
+                </div>
+            </div>
+
+            <figure class="hero-figure reveal" id="hero-figure">
+                <img id="hero-img" src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=900&q=80" alt="Persona atando sus tenis deportivos antes de entrenar">
+                <figcaption class="visually-hidden">Entrenamiento urbano con calzado deportivo</figcaption>
+            </figure>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- ============ CATEGORÍAS ============ -->
+    <section class="categorias" id="categorias" aria-labelledby="cat-heading">
+        <div class="section-inner">
+            <div class="section-head reveal">
+                <span class="eyebrow">Explora</span>
+                <h2 id="cat-heading">Compra por categoría</h2>
+            </div>
+
+            <div class="cat-grid">
+                <article class="cat-card reveal">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=700&q=80" alt="Hombre entrenando con ropa deportiva negra">
+                        <figcaption>
+                            <span>Hombre</span>
+                            <a href="#" class="cat-link">Ver todo <span aria-hidden="true">→</span></a>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="cat-card reveal">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=80" alt="Mujer estirando con ropa deportiva antes de correr">
+                        <figcaption>
+                            <span>Mujer</span>
+                            <a href="#" class="cat-link">Ver todo <span aria-hidden="true">→</span></a>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="cat-card reveal">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=700&q=80" alt="Par de tenis deportivos sobre fondo urbano">
+                        <figcaption>
+                            <span>Tenis</span>
+                            <a href="#" class="cat-link">Ver todo <span aria-hidden="true">→</span></a>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="cat-card reveal">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=700&q=80" alt="Accesorios deportivos: guantes, banda y botella de agua">
+                        <figcaption>
+                            <span>Accesorios</span>
+                            <a href="#" class="cat-link">Ver todo <span aria-hidden="true">→</span></a>
+                        </figcaption>
+                    </figure>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PRODUCTOS DESTACADOS ============ -->
+    <section class="productos" id="productos" aria-labelledby="prod-heading">
+        <div class="section-inner">
+            <div class="section-head reveal">
+                <span class="eyebrow">Lo más pedido</span>
+                <h2 id="prod-heading">Productos destacados</h2>
+            </div>
+
+            <ul class="prod-grid" id="product-grid">
+
+                <li class="prod-card reveal" data-id="p1">
+                    <div class="prod-media">
+                        <span class="prod-tag">-25%</span>
+                        <button class="fav-toggle" data-id="p1" aria-pressed="false" aria-label="Agregar Urban Runner Pro a favoritos">
+                            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 20s-7-4.4-9.5-9C0.7 7.5 2.6 4 6 4c2 0 3.5 1.2 6 3.7C14.5 5.2 16 4 18 4c3.4 0 5.3 3.5 3.5 7-2.5 4.6-9.5 9-9.5 9z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Tenis deportivos Urban Runner Pro color negro con detalles rojos">
+                    </div>
+                    <div class="prod-body">
+                        <span class="prod-cat">Calzado</span>
+                        <h3>Urban Runner Pro</h3>
+                        <p>Amortiguación reactiva para asfalto y pista.</p>
+                        <div class="prod-price">
+                            <span class="price-old">$2,199</span>
+                            <span class="price-new">$1,649</span>
+                        </div>
+                        <button class="btn btn--cart" data-id="p1" data-name="Urban Runner Pro" data-price="1649">Agregar al carrito</button>
+                    </div>
+                </li>
+
+                <li class="prod-card reveal" data-id="p2">
+                    <div class="prod-media">
+                        <span class="prod-tag">-15%</span>
+                        <button class="fav-toggle" data-id="p2" aria-pressed="false" aria-label="Agregar Training Flex a favoritos">
+                            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 20s-7-4.4-9.5-9C0.7 7.5 2.6 4 6 4c2 0 3.5 1.2 6 3.7C14.5 5.2 16 4 18 4c3.4 0 5.3 3.5 3.5 7-2.5 4.6-9.5 9-9.5 9z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=600&q=80" alt="Playera Training Flex de secado rápido">
+                    </div>
+                    <div class="prod-body">
+                        <span class="prod-cat">Ropa</span>
+                        <h3>Training Flex</h3>
+                        <p>Tela transpirable de secado rápido.</p>
+                        <div class="prod-price">
+                            <span class="price-old">$699</span>
+                            <span class="price-new">$594</span>
+                        </div>
+                        <button class="btn btn--cart" data-id="p2" data-name="Training Flex" data-price="594">Agregar al carrito</button>
+                    </div>
+                </li>
+
+                <li class="prod-card reveal" data-id="p3">
+                    <div class="prod-media">
+                        <span class="prod-tag">-30%</span>
+                        <button class="fav-toggle" data-id="p3" aria-pressed="false" aria-label="Agregar Street Motion a favoritos">
+                            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 20s-7-4.4-9.5-9C0.7 7.5 2.6 4 6 4c2 0 3.5 1.2 6 3.7C14.5 5.2 16 4 18 4c3.4 0 5.3 3.5 3.5 7-2.5 4.6-9.5 9-9.5 9z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=600&q=80" alt="Tenis Street Motion estilo urbano blancos y rojos">
+                    </div>
+                    <div class="prod-body">
+                        <span class="prod-cat">Calzado</span>
+                        <h3>Street Motion</h3>
+                        <p>Estilo urbano con suela antiderrapante.</p>
+                        <div class="prod-price">
+                            <span class="price-old">$1,899</span>
+                            <span class="price-new">$1,329</span>
+                        </div>
+                        <button class="btn btn--cart" data-id="p3" data-name="Street Motion" data-price="1329">Agregar al carrito</button>
+                    </div>
+                </li>
+
+                <li class="prod-card reveal" data-id="p4">
+                    <div class="prod-media">
+                        <span class="prod-tag">-20%</span>
+                        <button class="fav-toggle" data-id="p4" aria-pressed="false" aria-label="Agregar Performance Hoodie a favoritos">
+                            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 20s-7-4.4-9.5-9C0.7 7.5 2.6 4 6 4c2 0 3.5 1.2 6 3.7C14.5 5.2 16 4 18 4c3.4 0 5.3 3.5 3.5 7-2.5 4.6-9.5 9-9.5 9z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=600&q=80" alt="Sudadera con capucha Performance Hoodie color negro">
+                    </div>
+                    <div class="prod-body">
+                        <span class="prod-cat">Ropa</span>
+                        <h3>Performance Hoodie</h3>
+                        <p>Abrigo ligero para antes y después de entrenar.</p>
+                        <div class="prod-price">
+                            <span class="price-old">$1,099</span>
+                            <span class="price-new">$879</span>
+                        </div>
+                        <button class="btn btn--cart" data-id="p4" data-name="Performance Hoodie" data-price="879">Agregar al carrito</button>
+                    </div>
+                </li>
+
+                <li class="prod-card reveal" data-id="p5">
+                    <div class="prod-media">
+                        <span class="prod-tag">-10%</span>
+                        <button class="fav-toggle" data-id="p5" aria-pressed="false" aria-label="Agregar Active Essential a favoritos">
+                            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 20s-7-4.4-9.5-9C0.7 7.5 2.6 4 6 4c2 0 3.5 1.2 6 3.7C14.5 5.2 16 4 18 4c3.4 0 5.3 3.5 3.5 7-2.5 4.6-9.5 9-9.5 9z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Mallas deportivas Active Essential color negro">
+                    </div>
+                    <div class="prod-body">
+                        <span class="prod-cat">Ropa</span>
+                        <h3>Active Essential</h3>
+                        <p>Mallas de compresión para máxima libertad.</p>
+                        <div class="prod-price">
+                            <span class="price-old">$799</span>
+                            <span class="price-new">$719</span>
+                        </div>
+                        <button class="btn btn--cart" data-id="p5" data-name="Active Essential" data-price="719">Agregar al carrito</button>
+                    </div>
+                </li>
+
+                <li class="prod-card reveal" data-id="p6">
+                    <div class="prod-media">
+                        <span class="prod-tag">-18%</span>
+                        <button class="fav-toggle" data-id="p6" aria-pressed="false" aria-label="Agregar Sport Classic a favoritos">
+                            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 20s-7-4.4-9.5-9C0.7 7.5 2.6 4 6 4c2 0 3.5 1.2 6 3.7C14.5 5.2 16 4 18 4c3.4 0 5.3 3.5 3.5 7-2.5 4.6-9.5 9-9.5 9z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=600&q=80" alt="Tenis Sport Classic blancos estilo retro">
+                    </div>
+                    <div class="prod-body">
+                        <span class="prod-cat">Calzado</span>
+                        <h3>Sport Classic</h3>
+                        <p>El clásico retornado con materiales actuales.</p>
+                        <div class="prod-price">
+                            <span class="price-old">$1,599</span>
+                            <span class="price-new">$1,311</span>
+                        </div>
+                        <button class="btn btn--cart" data-id="p6" data-name="Sport Classic" data-price="1311">Agregar al carrito</button>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============ PROMOCIÓN ============ -->
+    <section class="promocion" id="promocion" aria-labelledby="promo-heading">
+        <div class="promo-inner reveal">
+            <div class="promo-text">
+                <span class="eyebrow eyebrow--light">Oferta por tiempo limitado</span>
+                <h2 id="promo-heading">HASTA 40% OFF</h2>
+                <p>Renueva tu outfit deportivo y aprovecha nuestras ofertas especiales.</p>
+                <a href="#productos" class="btn btn--dark">Aprovechar oferta</a>
+            </div>
+            <figure class="promo-figure">
+                <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?auto=format&fit=crop&w=800&q=80" alt="Atleta corriendo al amanecer usando ropa deportiva">
+            </figure>
+        </div>
+    </section>
+
+    <!-- ============ COLECCIONES ============ -->
+    <section class="colecciones" id="colecciones" aria-labelledby="col-heading">
+        <div class="section-inner">
+            <div class="section-head reveal">
+                <span class="eyebrow">Selecciona tu terreno</span>
+                <h2 id="col-heading">Colecciones</h2>
+            </div>
+
+            <div class="col-grid">
+                <article class="col-card reveal">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1502224562085-639556652f33?auto=format&fit=crop&w=800&q=80" alt="Corredor entrenando en pista al aire libre">
+                        <figcaption>
+                            <h3>Running</h3>
+                            <a href="#" class="btn btn--ghost">Explorar</a>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="col-card reveal">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80" alt="Persona levantando pesas en gimnasio">
+                        <figcaption>
+                            <h3>Training</h3>
+                            <a href="#" class="btn btn--ghost">Explorar</a>
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article class="col-card reveal">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=800&q=80" alt="Grupo urbano con ropa deportiva de calle">
+                        <figcaption>
+                            <h3>Street Sport</h3>
+                            <a href="#" class="btn btn--ghost">Explorar</a>
+                        </figcaption>
+                    </figure>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ BENEFICIOS ============ -->
+    <aside class="beneficios" aria-labelledby="ben-heading">
+        <div class="section-inner">
+            <h2 id="ben-heading" class="visually-hidden">Beneficios de comprar en Pepito's Store</h2>
+            <ul class="ben-grid">
+                <li class="ben-item reveal">
+                    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7.5" cy="17.5" r="1.6" fill="currentColor"/><circle cx="17.5" cy="17.5" r="1.6" fill="currentColor"/></svg>
+                    <div>
+                        <h3>Envío gratis</h3>
+                        <p>En compras mayores a $999.</p>
+                    </div>
+                </li>
+                <li class="ben-item reveal">
+                    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M4 12a8 8 0 1 1 3 6.2M4 12v5M4 12H9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <h3>Cambios fáciles</h3>
+                        <p>Hasta 30 días después de tu compra.</p>
+                    </div>
+                </li>
+                <li class="ben-item reveal">
+                    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                    <div>
+                        <h3>Compra segura</h3>
+                        <p>Tus datos siempre protegidos.</p>
+                    </div>
+                </li>
+                <li class="ben-item reveal">
+                    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M3 12a9 9 0 1 1 4 7.5L3 21l1.2-3.8A8.96 8.96 0 0 1 3 12z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                    <div>
+                        <h3>Atención al cliente</h3>
+                        <p>Estamos para ayudarte todos los días.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+{% endblock %}
